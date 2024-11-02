@@ -284,7 +284,7 @@ const TileTooltip = ({
               activeTextColor,
             ].join(" ")}
           >
-            Start +10 XP
+            Mulai +10 XP
           </Link>
         ) : status === "LOCKED" ? (
           <button
@@ -372,7 +372,7 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
                             textColor={unit.textColor}
                           />
                         ) : selectedTile !== i && status === "ACTIVE" ? (
-                          <HoverLabel text="Start" textColor={unit.textColor} />
+                          <HoverLabel text="Mulai" textColor={unit.textColor} />
                         ) : null}
                         <LessonCompletionSvg
                           lessonsCompleted={lessonsCompleted}
