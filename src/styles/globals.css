@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Poppins';
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins';
+    background-color:#141f25  ;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

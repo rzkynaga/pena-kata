@@ -100,7 +100,7 @@ export const LoginScreen = ({
   return (
     <article
       className={[
-        "fixed inset-0 z-30 flex flex-col bg-white p-7 transition duration-300",
+        "fixed inset-0 z-30 flex flex-col bg-[#f0f0f0] p-7 transition duration-300",
         loginScreenState === "HIDDEN"
           ? "pointer-events-none opacity-0"
           : "opacity-100",
@@ -127,7 +127,7 @@ export const LoginScreen = ({
       <div className="flex grow items-center justify-center">
         <div className="flex w-full flex-col gap-5 sm:w-96">
           <h2 className="text-center text-2xl font-bold text-gray-800">
-            {loginScreenState === "LOGIN" ? "Log in" : "Create your profile"}
+            {loginScreenState === "LOGIN" ? "Masuk" : "Buat akunmu"}
           </h2>
           <div className="flex flex-col gap-2 text-black">
             {loginScreenState === "SIGNUP" && (
@@ -135,7 +135,7 @@ export const LoginScreen = ({
                 <div className="relative flex grow">
                   <input
                     className="grow rounded-2xl border-2 border-gray-200 bg-gray-50 px-4 py-3"
-                    placeholder="Age (optional)"
+                    placeholder="Umur"
                   />
                   <div className="absolute bottom-0 right-0 top-0 flex items-center justify-center pr-4">
                     <div
@@ -150,13 +150,12 @@ export const LoginScreen = ({
                       ?
                       {ageTooltipShown && (
                         <div className="absolute -right-5 top-full z-10 w-72 rounded-2xl border-2 border-gray-200 bg-white p-4 text-center text-xs leading-5 text-gray-800">
-                          Providing your age ensures you get the right Duolingo
-                          experience. For more details, please visit our{" "}
+                          Dengan mengisi umur, kamu akan mendapatkan pengalaman Duolingo yang sesuai. Untuk informasi lebih lanjut, bacalah{" "}
                           <Link
                             href="https://www.duolingo.com/privacy"
                             className="text-blue-700"
                           >
-                            Privacy Policy
+                            Kebijakan Privasi kami.
                           </Link>
                         </div>
                       )}
@@ -165,7 +164,7 @@ export const LoginScreen = ({
                 </div>
                 <input
                   className="grow rounded-2xl border-2 border-gray-200 bg-gray-50 px-4 py-3"
-                  placeholder="Name (optional)"
+                  placeholder="Nama"
                   ref={nameInputRef}
                 />
               </>
@@ -174,15 +173,15 @@ export const LoginScreen = ({
               className="grow rounded-2xl border-2 border-gray-200 bg-gray-50 px-4 py-3"
               placeholder={
                 loginScreenState === "LOGIN"
-                  ? "Email or username (optional)"
-                  : "Email (optional)"
+                  ? "Email atau nama pengguna"
+                  : "Email"
               }
             />
             <div className="relative flex grow">
               <input
                 className="grow rounded-2xl border-2 border-gray-200 bg-gray-50 px-4 py-3"
-                placeholder="Password (optional)"
-                type="password"
+                placeholder="Kata sandi"
+                type="Kata sandi"
               />
               {loginScreenState === "LOGIN" && (
                 <div className="absolute bottom-0 right-0 top-0 flex items-center justify-center pr-5">
@@ -190,7 +189,7 @@ export const LoginScreen = ({
                     className="font-bold uppercase text-gray-400 hover:brightness-75"
                     href="/forgot-password"
                   >
-                    Forgot?
+                    Lupa?
                   </Link>
                 </div>
               )}
@@ -200,11 +199,11 @@ export const LoginScreen = ({
             className="rounded-2xl border-b-4 border-blue-500 bg-blue-400 py-3 font-bold uppercase text-white transition hover:brightness-110"
             onClick={logInAndSetUserProperties}
           >
-            {loginScreenState === "LOGIN" ? "Log in" : "Create account"}
+            {loginScreenState === "LOGIN" ? "Masuk" : "Buat akun"}
           </button>
           <div className="flex items-center gap-2">
             <div className="h-[2px] grow bg-gray-300"></div>
-            <span className="font-bold uppercase text-gray-400">or</span>
+            <span className="font-bold uppercase text-gray-400">atau</span>
             <div className="h-[2px] grow bg-gray-300"></div>
           </div>
           <div className="flex gap-5">
@@ -222,38 +221,38 @@ export const LoginScreen = ({
             </button>
           </div>
           <p className="text-center text-xs leading-5 text-gray-400">
-            By signing in to Duolingo, you agree to our{" "}
+            Dengan masuk ke PenaKata, kamu menyetujui{" "}
             <Link
               className="font-bold"
               href="https://www.duolingo.com/terms?wantsPlainInfo=1"
             >
-              Terms
+              Ketentuan
             </Link>{" "}
-            and{" "}
+            dan{" "}
             <Link
               className="font-bold"
               href="https://www.duolingo.com/privacy?wantsPlainInfo=1"
             >
-              Privacy Policy
+              Kebijakan Privasi
             </Link>
-            .
+            {" "}kami.
           </p>
           <p className="text-center text-xs leading-5 text-gray-400">
-            This site is protected by reCAPTCHA Enterprise and the Google{" "}
+          Situs ini dilindungi oleh reCAPTCHA Enterprise, dan {" "}
             <Link
               className="font-bold"
               href="https://policies.google.com/privacy"
             >
-              Privacy Policy
+              Kebijakan Privasi
             </Link>{" "}
-            and{" "}
+            serta{" "}
             <Link
               className="font-bold"
               href="https://policies.google.com/terms"
             >
-              Terms of Service
+              Ketentuan Layanan Google
             </Link>{" "}
-            apply.
+            berlaku.
           </p>
           <p className="block text-center sm:hidden">
             <span className="text-sm font-bold text-gray-700">

@@ -7,7 +7,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
   return (
     <>
       <Head>
-        <title>React Duolingo Clone</title>
+        <title>PenaKata</title>
         <meta
           name="description"
           content="Duolingo web app clone written with React"
