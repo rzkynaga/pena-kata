@@ -97,21 +97,38 @@ export const LoginScreen = ({
     void router.push("/learn");
   };
 
-  return (
+  const [isVisible, setIsVisible] = useState(true);
+
+  const [shouldRender, setShouldRender] = useState(loginScreenState !== "HIDDEN");
+  const [isFadingOut, setIsFadingOut] = useState(false);
+
+  const handleClose = () => {
+    setIsFadingOut(true); // Mulai animasi fade-out
+    setTimeout(() => {
+      setIsFadingOut(false); // Reset animasi
+      setShouldRender(false); // Hapus dari DOM setelah animasi selesai
+      setLoginScreenState("HIDDEN");
+    }, 300); // Durasi animasi sesuai kebutuhan, misal 300ms
+  };
+
+  useEffect(() => {
+    if (loginScreenState !== "HIDDEN") {
+      setShouldRender(true); // Render komponen saat login screen terbuka
+    }
+  }, [loginScreenState]);
+
+  return shouldRender ? (
     <article
       className={[
-        "fixed inset-0 z-30 flex flex-col bg-[#f0f0f0] p-7 transition duration-300",
-        loginScreenState === "HIDDEN"
-          ? "pointer-events-none opacity-0"
-          : "opacity-100",
+        "fixed inset-0 z-30 flex flex-col bg-[#f0f0f0] p-7 transition-opacity duration-300",
+        isFadingOut ? "opacity-0 pointer-events-none" : "opacity-100"
       ].join(" ")}
-      aria-hidden={!loginScreenState}
+      aria-hidden={loginScreenState === "HIDDEN"}
     >
       <header className="flex flex-row-reverse justify-between sm:flex-row">
         <button
-          className="flex text-gray-400"
-          onClick={() => setLoginScreenState("HIDDEN")}
-        >
+          className="flex text-gray-600"
+          onClick={handleClose}>
           <CloseSvg />
           <span className="sr-only">Close</span>
         </button>
@@ -238,7 +255,7 @@ export const LoginScreen = ({
             {" "}kami.
           </p>
           <p className="text-center text-xs leading-5 text-gray-400">
-          Situs ini dilindungi oleh reCAPTCHA Enterprise, dan {" "}
+            Situs ini dilindungi oleh reCAPTCHA Enterprise, dan {" "}
             <Link
               className="font-bold"
               href="https://policies.google.com/privacy"
@@ -272,5 +289,5 @@ export const LoginScreen = ({
         </div>
       </div>
     </article>
-  );
+  ) : null
 };

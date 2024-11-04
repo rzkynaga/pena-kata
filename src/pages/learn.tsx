@@ -228,7 +228,7 @@ const TileTooltip = ({
   }, [selectedTile, tileTooltipRef, closeTooltip, index]);
 
   const unit = units.find((unit) => unit.unitNumber === unitNumber);
-  const activeBackgroundColor = unit?.backgroundColor ?? "bg-green-500";
+  const activeBackgroundColor = unit?.backgroundColor ?? "bg-green-900";
   const activeTextColor = unit?.textColor ?? "text-green-500";
 
   return (

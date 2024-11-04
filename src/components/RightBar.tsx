@@ -223,14 +223,14 @@ const DailyQuestsSection = () => {
   const xpToday = useBoundStore((x) => x.xpToday());
   const goalXp = useBoundStore((x) => x.goalXp);
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border-2 border-gray-200 p-6 font-bold text-gray-700">
-      <h2 className="text-xl">Daily Quests</h2>
+    <article className="flex flex-col gap-5 rounded-2xl border-2 border-[#f0f0f0] p-6 font-bold text-gray-700">
+      <h2 className="text-xl text-[#f0f0f0]">Daily Quests</h2>
       <div className="flex items-center gap-4">
         <LightningProgressSvg />
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-2 text-[#f0f0f0]">
           <h3>Earn {goalXp} XP</h3>
           <div className="flex items-center">
-            <div className="relative h-5 w-52 rounded-l-full bg-gray-200">
+            <div className="relative h-5 w-52 rounded-l-full bg-gray-700">
               <div
                 className={[
                   "relative h-full rounded-l-full bg-yellow-400",
@@ -587,8 +587,8 @@ const XpProgressSection = () => {
   const xpToday = useBoundStore((x) => x.xpToday());
   const goalXp = useBoundStore((x) => x.goalXp);
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border-2 border-gray-200 p-6 font-bold text-gray-700">
-      <div className="flex items-center justify-between">
+    <article className="flex flex-col gap-5 rounded-2xl border-2 border-[#f0f0f0] p-6 font-bold text-gray-700">
+      <div className="flex items-center justify-between text-[#f0f0f0]">
         <h2 className="text-xl">XP Progress</h2>
         <Link href="/settings/coach" className="uppercase text-blue-400">
           Edit goal
@@ -597,9 +597,9 @@ const XpProgressSection = () => {
       <div className="flex gap-5">
         <TreasureClosedSvg />
         <div className="flex grow flex-col justify-around">
-          <h3 className="font-normal text-gray-500">Daily goal</h3>
+          <h3 className="font-normal text-[#f0f0f0]">Daily goal</h3>
           <div className="flex items-center gap-5">
-            <div className="relative h-4 w-full grow rounded-full bg-gray-200">
+            <div className="relative h-4 w-full grow rounded-full bg-gray-700">
               {xpToday > 0 && (
                 <div
                   className="absolute left-0 top-0 h-4 rounded-full bg-yellow-400"
@@ -609,7 +609,7 @@ const XpProgressSection = () => {
                 </div>
               )}
             </div>
-            <div className="text-md shrink-0 font-normal text-gray-400">
+            <div className="text-md shrink-0 font-normal text-[#f0f0f0]">
               {xpToday}/{goalXp} XP
             </div>
           </div>
@@ -625,7 +625,7 @@ const CreateAProfileSection = ({
   setLoginScreenState: React.Dispatch<React.SetStateAction<LoginScreenState>>;
 }) => {
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border-2 border-gray-200 p-6 font-bold">
+    <article className="flex flex-col gap-5 rounded-2xl border-2 text-[#f0f0f0] border-[#f0f0f0] p-6 font-bold">
       <h2 className="text-xl">Create a profile to save your progress!</h2>
       <button
         className="rounded-2xl border-b-4 border-green-600 bg-green-500 py-3 uppercase text-white transition hover:border-green-500 hover:bg-green-400"
