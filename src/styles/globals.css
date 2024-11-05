@@ -1,11 +1,15 @@
 @font-face {
-    font-family: 'Poppins';
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Feather Bold";
+    src: url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.eot");
+    src: url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/14936bb7a4b6575fd2eee80a3ab52cc2.svg#Feather Bold")format("svg");
 }
 
 body {
-    font-family: 'Poppins';
+    font-family: 'Feather Bold', sans-serif;
     background-color:#141f25  ;
 }
 

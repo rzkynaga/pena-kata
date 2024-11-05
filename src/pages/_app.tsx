@@ -12,7 +12,7 @@ const MyApp: AppType = ({ Component, pageProps }) => {
           name="description"
           content="Duolingo web app clone written with React"
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/logo3-penakata.png" />
         <meta name="theme-color" content="#0A0" />
         <link rel="manifest" href="/app.webmanifest" />
       </Head>
