@@ -506,7 +506,7 @@ const Learn: NextPage = () => {
         backgroundColor={topBarColors.backgroundColor}
         borderColor={topBarColors.borderColor}
       />
-      <LeftBar selectedTab="Learn" />
+      <LeftBar selectedTab="Belajar" />
 
       <div className="flex justify-center gap-3 pt-14 sm:p-6 sm:pt-10 md:ml-24 lg:ml-64 lg:gap-12">
         <div className="flex max-w-2xl grow flex-col">
@@ -537,7 +537,7 @@ const Learn: NextPage = () => {
 
       <div className="pt-[90px]"></div>
 
-      <BottomBar selectedTab="Learn" />
+      <BottomBar selectedTab="Belajar" />
       <LoginScreen
         loginScreenState={loginScreenState}
         setLoginScreenState={setLoginScreenState}
@@ -638,7 +638,7 @@ const UnitHeader = ({
         >
           <GuidebookSvg />
           <span className="sr-only font-bold uppercase lg:not-sr-only">
-            Guidebook
+            Buku Panduan
           </span>
         </Link>
       </header>

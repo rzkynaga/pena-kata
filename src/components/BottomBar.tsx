@@ -7,14 +7,14 @@ type BottomBarItem = {
   icon: JSX.Element;
 };
 
-export type Tab = "Learn" | "Shop" | "Profile" | "Leaderboards";
+export type Tab = "Belajar" | "Toko" | "Profil" | "Leaderboards";
 
 export const useBottomBarItems = () => {
   const loggedIn = useBoundStore((x) => x.loggedIn);
 
   const bottomBarItems: BottomBarItem[] = [
     {
-      name: "Learn",
+      name: "Belajar",
       href: "/learn",
       icon: (
         <svg
@@ -47,7 +47,7 @@ export const useBottomBarItems = () => {
       ),
     },
     {
-      name: "Shop",
+      name: "Toko",
       href: "/shop",
       icon: (
         <svg
@@ -91,7 +91,7 @@ export const useBottomBarItems = () => {
       ),
     },
     {
-      name: "Profile",
+      name: "Profil",
       href: loggedIn ? "/profile" : "/learn?sign-up",
       icon: (
         <svg

@@ -78,7 +78,7 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
             tabIndex={0}
           >
             <LeftBarMoreMenuSvg />{" "}
-            <span className="hidden text-sm lg:inline">More</span>
+            <span className="hidden text-sm lg:inline">Lainnya</span>
             <div
               className={[
                 "absolute left-full top-[-10px] min-w-[300px] rounded-2xl border-2 border-gray-300 bg-white text-left text-gray-400",
@@ -93,7 +93,7 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                   rel="noopener noreferrer"
                 >
                   <GlobeIconSvg className="h-10 w-10" />
-                  Schools
+                  Sekolah
                 </Link>
                 <Link
                   className="flex items-center gap-4 px-5 py-2 text-left uppercase hover:bg-gray-100"
@@ -111,27 +111,27 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                     className="px-5 py-2 text-left uppercase hover:bg-gray-100"
                     onClick={() => setLoginScreenState("SIGNUP")}
                   >
-                    Create a profile
+                    Buat Profil
                   </button>
                 )}
                 <Link
                   className="px-5 py-2 text-left uppercase hover:bg-gray-100"
                   href={loggedIn ? "/settings/account" : "/settings/sound"}
                 >
-                  Settings
+                  Pengaturan
                 </Link>
                 <Link
                   className="px-5 py-2 text-left uppercase hover:bg-gray-100"
                   href="https://support.duolingo.com/hc/en-us"
                 >
-                  Help
+                  Bantuan
                 </Link>
                 {!loggedIn && (
                   <button
                     className="px-5 py-2 text-left uppercase hover:bg-gray-100"
                     onClick={() => setLoginScreenState("LOGIN")}
                   >
-                    Sign in
+                    Masuk
                   </button>
                 )}
                 {loggedIn && (
