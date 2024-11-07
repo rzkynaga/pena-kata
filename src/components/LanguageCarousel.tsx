@@ -86,7 +86,7 @@ export const LanguageCarousel = () => {
   const languagesContainer = useRef<null | HTMLDivElement>(null);
   const lastLanguageIndex = 19;
   return (
-    <article className="absolute bottom-0 left-0 right-0 hidden h-20 items-center justify-center bg-[#0a4a82] text-white md:flex">
+    <article className="absolute bottom-0 left-0 right-0 hidden h-20 items-center justify-center bg-[#133156] text-[#fff] md:flex">
       <div className="flex w-full max-w-5xl justify-between">
         <button
           className="opacity-50"
@@ -102,19 +102,19 @@ export const LanguageCarousel = () => {
           <span className="sr-only">Scroll left</span>
         </button>
         <div
-          className="flex items-center gap-6 overflow-x-hidden"
+          className="flex items-center gap-20 overflow-x-hidden"
           ref={languagesContainer}
         >
           {languages.map((language) => {
             return (
               <Link
-                key={language.code}
-                className="flex items-center gap-2"
+                key={language.name}
+                className="flex items-center p-3 gap-7 rounded-xl"
                 href={"/learn"}
                 onClick={() => setLanguage(language)}
               >
-                <Flag language={language} width={40} />
-                <span className="text-sm font-bold uppercase">
+                <Flag language={language} width={60} />
+                <span className=" font-bold text-md uppercase rounded-md hover:underline">
                   {language.name}
                 </span>
               </Link>
