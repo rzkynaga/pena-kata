@@ -38,21 +38,21 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
 
   return (
     <>
-      <nav className="fixed bottom-0 left-0 top-0 hidden flex-col gap-5 border-r-2 border-[#39464f] bg-[#235390] p-3 md:flex lg:w-64 lg:p-5">
+      <nav className="fixed bottom-0 left-0 top-0 hidden flex-col gap-5 border-r-2 border-[#39464f] bg-[#141F25] p-3 md:flex lg:w-64 lg:p-5">
         <Link
           href="/learn"
-          className="mb-5 ml-5 mt-5 hidden text-3xl font-bold text-[#fff] lg:block"
+          className="mb-5 ml-5 mt-5 hidden text-3xl font-bold text-blue-400 lg:block"
         >
-          PenaKata
+          penakata
         </Link>
-        <ul className="flex flex-col items-stretch gap-3">
+        <ul className="flex flex-col items-stretch gap-2">
           {bottomBarItems.map((item) => {
             return (
               <li key={item.href} className="flex flex-1">
                 {item.name === selectedTab ? (
                   <Link
                     href={item.href}
-                    className="flex grow items-center gap-3 rounded-xl border-2 border-[#84d8ff] bg-[#ddf4ff] px-2 py-1 text-sm font-bold uppercase text-blue-400"
+                    className="flex grow items-center gap-3 rounded-xl border-2 border-[#84d8ff] bg-gray-100 bg-opacity-5 px-2 py-1 text-sm font-bold uppercase text-blue-400"
                   >
                     {item.icon}{" "}
                     <span className="sr-only lg:not-sr-only">{item.name}</span>
@@ -60,7 +60,7 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                 ) : (
                   <Link
                     href={item.href}
-                    className="flex grow items-center gap-3 rounded-xl px-2 py-1 text-sm font-bold uppercase text-gray-100 hover:bg-gray-100"
+                    className="flex grow items-center gap-3 rounded-xl px-2 py-1 text-sm font-bold uppercase text-gray-100 hover:bg-gray-800"
                   >
                     {item.icon}{" "}
                     <span className="sr-only lg:not-sr-only">{item.name}</span>
@@ -70,7 +70,7 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
             );
           })}
           <div
-            className="relative flex grow cursor-default items-center gap-3 rounded-xl px-2 py-1 font-bold uppercase text-gray-400 hover:bg-gray-100"
+            className="relative flex grow cursor-default items-center gap-3 rounded-xl px-2 py-1 font-bold uppercase text-gray-400 hover:bg-gray-800"
             onClick={() => setMoreMenuShown((x) => !x)}
             onMouseEnter={() => setMoreMenuShown(true)}
             onMouseLeave={() => setMoreMenuShown(false)}
@@ -78,16 +78,16 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
             tabIndex={0}
           >
             <LeftBarMoreMenuSvg />{" "}
-            <span className="hidden text-sm lg:inline">Lainnya</span>
+            <span className="hidden text-sm text-[#f0f0f0] lg:inline">Lainnya</span>
             <div
               className={[
-                "absolute left-full top-[-10px] min-w-[300px] rounded-2xl border-2 border-gray-300 bg-white text-left text-gray-400",
+                "absolute left-full top-[-10px] min-w-[300px] rounded-2xl border-2 border-gray-300 border-opacity-20 bg-gray-800 text-left text-gray-400",
                 moreMenuShown ? "" : "hidden",
               ].join(" ")}
             >
               <div className="flex flex-col py-2">
                 <Link
-                  className="flex items-center gap-4 px-5 py-2 text-left uppercase hover:bg-gray-100"
+                  className="flex items-center gap-4 px-5 py-2 text-left uppercase hover:bg-gray-900"
                   href="https://schools.duolingo.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -96,7 +96,7 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                   Sekolah
                 </Link>
                 <Link
-                  className="flex items-center gap-4 px-5 py-2 text-left uppercase hover:bg-gray-100"
+                  className="flex items-center gap-4 px-5 py-2 text-left uppercase hover:bg-gray-900"
                   href="https://podcast.duolingo.com"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -108,27 +108,27 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
               <div className="flex flex-col border-t-2 border-gray-300 py-2">
                 {!loggedIn && (
                   <button
-                    className="px-5 py-2 text-left uppercase hover:bg-gray-100"
+                    className="px-5 py-2 text-left uppercase hover:bg-gray-900"
                     onClick={() => setLoginScreenState("SIGNUP")}
                   >
                     Buat Profil
                   </button>
                 )}
                 <Link
-                  className="px-5 py-2 text-left uppercase hover:bg-gray-100"
+                  className="px-5 py-2 text-left uppercase hover:bg-gray-900"
                   href={loggedIn ? "/settings/account" : "/settings/sound"}
                 >
                   Pengaturan
                 </Link>
                 <Link
-                  className="px-5 py-2 text-left uppercase hover:bg-gray-100"
+                  className="px-5 py-2 text-left uppercase hover:bg-gray-900"
                   href="https://support.duolingo.com/hc/en-us"
                 >
                   Bantuan
                 </Link>
                 {!loggedIn && (
                   <button
-                    className="px-5 py-2 text-left uppercase hover:bg-gray-100"
+                    className="px-5 py-2 text-left uppercase hover:bg-gray-900"
                     onClick={() => setLoginScreenState("LOGIN")}
                   >
                     Masuk
