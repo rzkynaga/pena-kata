@@ -229,7 +229,7 @@ const TileTooltip = ({
 
   const unit = units.find((unit) => unit.unitNumber === unitNumber);
   const activeBackgroundColor = unit?.backgroundColor ?? "bg-green-900";
-  const activeTextColor = unit?.textColor ?? "text-green-500";
+  const activeTextColor = unit?.textColor ?? "text-[#235390]";
 
   return (
     <div
@@ -280,7 +280,7 @@ const TileTooltip = ({
           <Link
             href="/lesson"
             className={[
-              "flex w-full items-center justify-center rounded-xl border-b-4 border-gray-200 bg-white p-3 uppercase",
+              "flex w-full items-center justify-center  rounded-xl text-[#235390] border-b-4 border-gray-200 bg-white p-3 uppercase",
               activeTextColor,
             ].join(" ")}
           >

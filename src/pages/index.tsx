@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         <GlobeSvg className="h-fit w-7/12 md:w-[360px]" />
         <div>
           <p className="mb-6 max-w-[600px] text-center text-3xl font-bold md:mb-12">
-            Cara gratis, seru, dan efektif untuk belajar bahasa!
+            Cintai budaya Indonesia, pelajari berbagai bahasa daerah!
           </p>
           <div className="mx-auto mt-4 flex w-fit flex-col items-center gap-3">
             <Link

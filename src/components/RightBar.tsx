@@ -223,7 +223,7 @@ const DailyQuestsSection = () => {
   const xpToday = useBoundStore((x) => x.xpToday());
   const goalXp = useBoundStore((x) => x.goalXp);
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border-2 border-[#f0f0f0] p-6 font-bold text-gray-700">
+    <article className="flex flex-col gap-5 rounded-2xl bg-[#235390] p-6 font-bold text-gray-700">
       <h2 className="text-xl text-[#f0f0f0]">Daily Quests</h2>
       <div className="flex items-center gap-4">
         <LightningProgressSvg />
@@ -587,10 +587,10 @@ const XpProgressSection = () => {
   const xpToday = useBoundStore((x) => x.xpToday());
   const goalXp = useBoundStore((x) => x.goalXp);
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border-2 border-[#f0f0f0] p-6 font-bold text-gray-700">
+    <article className="flex flex-col gap-5 rounded-2xl bg-[#235390] p-6 font-bold text-gray-700">
       <div className="flex items-center justify-between text-[#f0f0f0]">
         <h2 className="text-xl">XP Progress</h2>
-        <Link href="/settings/coach" className="uppercase text-blue-400">
+        <Link href="/settings/coach" className="uppercase text-[#f0f0f0]">
           Edit goal
         </Link>
       </div>
@@ -625,7 +625,7 @@ const CreateAProfileSection = ({
   setLoginScreenState: React.Dispatch<React.SetStateAction<LoginScreenState>>;
 }) => {
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border-2 text-[#f0f0f0] border-[#f0f0f0] p-6 font-bold">
+    <article className="flex flex-col gap-5 rounded-2xl text-[#f0f0f0] bg-[#235390] p-6 font-bold">
       <h2 className="text-xl">Create a profile to save your progress!</h2>
       <button
         className="rounded-2xl border-b-4 border-green-600 bg-green-500 py-3 uppercase text-white transition hover:border-green-500 hover:bg-green-400"
