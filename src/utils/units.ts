@@ -20,13 +20,13 @@ export const units: readonly Unit[] = [
   {
     unitNumber: 1,
     description: "Memahami frasa dasar",
-    backgroundColor: "bg-[#58cc02]",
-    textColor: "text-[#58cc02]",
-    borderColor: "border-[#46a302]",
+    backgroundColor: "bg-[#235390]",
+    textColor: "text-[#235390]",
+    borderColor: "border-[#16345C]",
     tiles: [
       {
         type: "star",
-        description: "Form basic sentences",
+        description: "Memahami frasa dasar",
       },
       {
         type: "book",
