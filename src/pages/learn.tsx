@@ -637,7 +637,7 @@ const UnitHeader = ({
           ].join(" ")}
         >
           <GuidebookSvg />
-          <span className="sr-only font-bold uppercase lg:not-sr-only">
+          <span className="sr-only font-bold uppercase lg:not-sr-only hover:opacity-80">
             Buku Panduan
           </span>
         </Link>

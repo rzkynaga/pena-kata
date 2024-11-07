@@ -38,10 +38,10 @@ export const RightBar = () => {
 
   return (
     <>
-      <aside className="sticky min-h-screen top-0 hidden w-96 flex-col gap-6 self-start sm:flex">
-        <article className="my-6 flex justify-between gap-4">
+      <aside className="sticky min-h-screen top-0 hidden w-96 flex-col gap-2 self-start sm:flex">
+        <article className="my-6 flex justify-between gap-4 mt-0 mb-0">
           <div
-            className="relative flex cursor-default items-center gap-2 rounded-xl p-3 font-bold uppercase text-gray-500 hover:bg-gray-100"
+            className="relative flex cursor-default items-center gap-2 rounded-xl p-3 font-bold uppercase text-gray-300 hover:bg-gray-800"
             onMouseEnter={() => setLanguagesShown(true)}
             onMouseLeave={() => setLanguagesShown(false)}
             onClick={() => setLanguagesShown((x) => !x)}
@@ -51,33 +51,33 @@ export const RightBar = () => {
             <Flag language={language} width={45} />
             <div>{language.name}</div>
             <div
-              className="absolute top-full z-10 rounded-2xl border-2 border-gray-300 bg-white"
+              className="absolute top-full z-10 rounded-2xl border-2 border-gray-300 border-opacity-20 bg-[#141F25]"
               style={{
                 left: "calc(50% - 150px)",
                 width: 300,
                 display: languagesShown ? "block" : "none",
               }}
             >
-              <h2 className="px-5 py-3 font-bold uppercase text-gray-400">
-                My courses
+              <h2 className="px-5 py-3 font-bold uppercase text-[#f0f0f0] text-opacity-60">
+                Kursusku
               </h2>
-              <button className="flex w-full items-center gap-3 border-t-2 border-gray-300 bg-blue-100 px-5 py-3 text-left font-bold">
+              <button className="flex w-full items-center gap-3 bg-gray-800 px-5 py-3 text-left font-bold">
                 <Flag language={language} width={45} />
-                <span className="text-blue-500">{language.name}</span>
+                <span className="text-gray-300">{language.name}</span>
               </button>
               <Link
-                className="flex w-full items-center gap-3 rounded-b-2xl border-t-2 border-gray-300 px-5 py-3 text-left font-bold hover:bg-gray-100"
+                className="flex w-full items-center gap-3 rounded-b-2xl border-gray-300 px-5 py-3 text-left font-bold hover:bg-gray-800"
                 href="/register"
               >
-                <span className="flex items-center justify-center rounded-lg border-2 border-gray-400 px-2 text-lg font-bold text-gray-400">
+                <span className="flex items-center justify-center rounded-lg border-2 border-gray-400 px-2 text-lg font-bold text-[#fff]">
                   +
                 </span>
-                <span className="text-gray-600">Add new course</span>
+                <span className="text-[#fff] normal-case">Tambahkan kursus baru</span>
               </Link>
             </div>
           </div>
           <span
-            className="relative flex items-center gap-2 rounded-xl p-3 font-bold text-orange-500 hover:bg-gray-100"
+            className="relative flex items-center gap-2 rounded-xl p-3 font-bold text-orange-500 hover:bg-gray-800"
             onMouseEnter={() => setStreakShown(true)}
             onMouseLeave={() => {
               setStreakShown(false);
@@ -98,22 +98,22 @@ export const RightBar = () => {
               {streak}
             </span>
             <div
-              className="absolute top-full z-10 flex flex-col gap-5 rounded-2xl border-2 border-gray-300 bg-white p-5 text-black"
+              className="absolute top-full z-10 flex flex-col gap-5 rounded-2xl border-opacity-20 border-2 border-gray-300 bg-[#141F25] p-5 text-black"
               style={{
                 left: "calc(50% - 200px)",
                 width: 400,
                 display: streakShown ? "flex" : "none",
               }}
             >
-              <h2 className="text-center text-lg font-bold">Streak</h2>
-              <p className="text-center text-sm font-normal text-gray-400">
-                {`But your streak will reset tomorrow if you don't practice tomorrow. Watch out!`}
+              <h2 className="text-center text-lg text-[#f0f0f0] font-bold">Streak</h2>
+              <p className="text-center text-sm font-normal text-[#fff]">
+                {`Selesaikan satu pelajaran hari ini untuk memulai runtunan baru!`}
               </p>
               <Calendar now={now} setNow={setNow} />
             </div>
           </span>
           <span
-            className="relative flex items-center gap-2 rounded-xl p-3 font-bold text-red-500 hover:bg-gray-100"
+            className="relative flex items-center gap-2 rounded-xl p-3 font-bold text-red-500 hover:bg-gray-800"
             onMouseEnter={() => setGemsShown(true)}
             onMouseLeave={() => setGemsShown(false)}
             onClick={() => setGemsShown((x) => !x)}
@@ -125,7 +125,7 @@ export const RightBar = () => {
               {lingots}
             </span>
             <div
-              className="absolute top-full z-10 flex w-72 items-center gap-3 rounded-2xl border-2 border-gray-300 bg-white p-5"
+              className="absolute top-full z-10 flex items-center gap-3 rounded-2xl border-2 border-gray-300 border-opacity-20 bg-[#141F25] p-5"
               style={{
                 left: "calc(50% - 150px)",
                 display: gemsShown ? "flex" : "none",
@@ -133,9 +133,9 @@ export const RightBar = () => {
             >
               <LingotsTreasureChestSvg className="w-24" />
               <div className="flex flex-col gap-3">
-                <h2 className="text-xl font-bold text-black">Lingots</h2>
+                <h2 className="text-xl font-bold text-gray-300">Lingots</h2>
                 <p className="text-sm font-normal text-gray-400">
-                  You have {lingots} {lingots === 1 ? "lingot" : "lingots"}.
+                  Kamu punya {lingots} {lingots === 1 ? "lingot" : "lingots"}.
                 </p>
                 <Link
                   className="uppercase text-blue-400 transition hover:brightness-110"
@@ -223,8 +223,8 @@ const DailyQuestsSection = () => {
   const xpToday = useBoundStore((x) => x.xpToday());
   const goalXp = useBoundStore((x) => x.goalXp);
   return (
-    <article className="flex flex-col gap-5 rounded-2xl bg-[#235390] p-6 font-bold text-gray-700">
-      <h2 className="text-xl text-[#f0f0f0]">Daily Quests</h2>
+    <article className="flex flex-col gap-5 rounded-2xl bg-[#141F25] border-2 border-gray-300 border-opacity-20 p-6 font-bold text-gray-700">
+      <h2 className="text-l text-[#f0f0f0]">Misi Harian</h2>
       <div className="flex items-center gap-4">
         <LightningProgressSvg />
         <div className="flex flex-col gap-2 text-[#f0f0f0]">
@@ -291,7 +291,7 @@ const LockedLeaderboardsSvg = () => {
 
 const TreasureClosedSvg = (props: ComponentProps<"svg">) => {
   return (
-    <svg width="76px" height="76px" viewBox="0 0 76 76" {...props}>
+    <svg width="56px" height="46px" viewBox="0 0 76 76" {...props}>
       <defs>
         <path
           d="M3.86139252,0 L68.6938776,0 C70.8264639,0 72.555269,1.71104633 72.555269,3.82172455 L72.555269,37.605593 C72.555269,39.7162712 70.8264639,41.4273175 68.6938776,41.4273175 L3.86139252,41.4273175 C1.72880408,41.4273175 0,39.7162712 0,37.605593 L0,3.82172455 C0,1.71104633 1.72880408,0 3.86139252,0 Z"
@@ -587,17 +587,17 @@ const XpProgressSection = () => {
   const xpToday = useBoundStore((x) => x.xpToday());
   const goalXp = useBoundStore((x) => x.goalXp);
   return (
-    <article className="flex flex-col gap-5 rounded-2xl bg-[#235390] p-6 font-bold text-gray-700">
+    <article className="flex flex-col gap-5 rounded-2xl bg-[#141F25] border-2 border-gray-300 border-opacity-20 p-6 font-bold text-gray-700">
       <div className="flex items-center justify-between text-[#f0f0f0]">
-        <h2 className="text-xl">XP Progress</h2>
-        <Link href="/settings/coach" className="uppercase text-[#f0f0f0]">
-          Edit goal
+        <h2 className="text-l">Progres XP</h2>
+        <Link href="/settings/coach" className="uppercase text-sm text-blue-300">
+          Ubah target
         </Link>
       </div>
       <div className="flex gap-5">
         <TreasureClosedSvg />
         <div className="flex grow flex-col justify-around">
-          <h3 className="font-normal text-[#f0f0f0]">Daily goal</h3>
+          <h3 className="font-normal text-[#f0f0f0]">Target harian</h3>
           <div className="flex items-center gap-5">
             <div className="relative h-4 w-full grow rounded-full bg-gray-700">
               {xpToday > 0 && (
@@ -625,19 +625,19 @@ const CreateAProfileSection = ({
   setLoginScreenState: React.Dispatch<React.SetStateAction<LoginScreenState>>;
 }) => {
   return (
-    <article className="flex flex-col gap-5 rounded-2xl text-[#f0f0f0] bg-[#235390] p-6 font-bold">
-      <h2 className="text-xl">Create a profile to save your progress!</h2>
+    <article className="flex flex-col gap-5 rounded-2xl text-[#f0f0f0] bg-[#141F25] border-2 border-gray-300 border-opacity-20 p-6 font-bold">
+      <h2 className="text-l">Buat profil untuk menyimpan progresmu!</h2>
       <button
-        className="rounded-2xl border-b-4 border-green-600 bg-green-500 py-3 uppercase text-white transition hover:border-green-500 hover:bg-green-400"
+        className="rounded-2xl border-b-4 border-green-900 bg-green-700 py-3 uppercase text-white transition hover:border-green-500 hover:bg-green-600"
         onClick={() => setLoginScreenState("SIGNUP")}
       >
-        Create a profile
+        Buat profil
       </button>
       <button
-        className="rounded-2xl border-b-4 border-blue-500 bg-blue-400 py-3 uppercase text-white transition hover:border-blue-400 hover:bg-blue-300"
+        className="rounded-2xl border-b-4 border-blue-900 bg-[#235390] py-3 uppercase text-white transition hover:border-blue-500 hover:bg-blue-600"
         onClick={() => setLoginScreenState("LOGIN")}
       >
-        Sign in
+        Masuk
       </button>
     </article>
   );
