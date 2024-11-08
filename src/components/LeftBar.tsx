@@ -136,7 +136,7 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                 )}
                 {loggedIn && (
                   <button
-                    className="px-5 py-2 text-left uppercase hover:bg-gray-100"
+                    className="px-5 py-2 text-left uppercase hover:bg-gray-900"
                     onClick={logOut}
                   >
                     Sign out

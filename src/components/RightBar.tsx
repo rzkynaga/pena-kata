@@ -176,14 +176,13 @@ const UnlockLeaderboardsSection = () => {
   const lessonsNeededToUnlockLeaderboards = 10 - lessonsCompleted;
 
   return (
-    <article className="flex flex-col gap-5 rounded-2xl border-2 border-gray-200 p-6 text-gray-700">
-      <h2 className="text-xl font-bold">Unlock Leaderboards!</h2>
+    <article className="flex flex-col gap-5 rounded-2xl border-2 border-gray-300 border-opacity-20 p-6 text-gray-300">
+      <h2 className="text-l font-bold">Buka Papan Skor!</h2>
       <div className="flex items-center gap-6">
         <LockedLeaderboardsSvg />
-        <p className="text-sm leading-6 text-gray-500">
-          Complete {lessonsNeededToUnlockLeaderboards} more lesson
-          {lessonsNeededToUnlockLeaderboards === 1 ? "" : "s"} to start
-          competing
+        <p className="text-sm leading-6 text-gray-300">
+          Selesaikan {lessonsNeededToUnlockLeaderboards} pelajaran lagi
+          {lessonsNeededToUnlockLeaderboards === 1 ? "" : ""}  untuk mulai berkompetisi
         </p>
       </div>
     </article>
@@ -228,7 +227,7 @@ const DailyQuestsSection = () => {
       <div className="flex items-center gap-4">
         <LightningProgressSvg />
         <div className="flex flex-col gap-2 text-[#f0f0f0]">
-          <h3>Earn {goalXp} XP</h3>
+          <h3>Dapatkan {goalXp} XP</h3>
           <div className="flex items-center">
             <div className="relative h-5 w-52 rounded-l-full bg-gray-700">
               <div

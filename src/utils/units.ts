@@ -43,7 +43,7 @@ export const units: readonly Unit[] = [
   },
   {
     unitNumber: 2,
-    description: "Get around in a city",
+    description: "Menggunakan kalimat dasar",
     backgroundColor: "bg-[#ce82ff]",
     textColor: "text-[#ce82ff]",
     borderColor: "border-[#a568cc]",
@@ -63,7 +63,7 @@ export const units: readonly Unit[] = [
   },
   {
     unitNumber: 3,
-    description: "Order food and drink",
+    description: "Menggunakan frasa umum",
     backgroundColor: "bg-[#00cd9c]",
     textColor: "text-[#00cd9c]",
     borderColor: "border-[#00a47d]",

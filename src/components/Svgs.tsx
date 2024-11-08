@@ -3158,7 +3158,7 @@ export const LockedLeaderboardSvg = () => {
 
       <div
         className="absolute bottom-0 left-0 right-0 h-3/4"
-        style={{ background: "linear-gradient(0deg, white, #ffffff00" }}
+        style={{ background: "linear-gradient(0deg, #141F25, #ffffff00" }}
       ></div>
     </div>
   );

@@ -368,7 +368,7 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
                       >
                         {tile.type === "fast-forward" && status === "LOCKED" ? (
                           <HoverLabel
-                            text="Jump here?"
+                            text="Lompat kesini?"
                             textColor={unit.textColor}
                           />
                         ) : selectedTile !== i && status === "ACTIVE" ? (
@@ -448,7 +448,7 @@ const UnitSection = ({ unit }: { unit: Unit }): JSX.Element => {
                       return tile.description;
                     case "fast-forward":
                       return status === "LOCKED"
-                        ? "Jump here?"
+                        ? "Lompat kesini?"
                         : tile.description;
                     case "trophy":
                       return `Unit ${unit.unitNumber} review`;
