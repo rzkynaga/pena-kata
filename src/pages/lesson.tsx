@@ -21,19 +21,19 @@ import { useRouter } from "next/router";
 
 const lessonProblem1 = {
   type: "SELECT_1_OF_3",
-  question: `Which one of these is "the apple"?`,
+  question: `Manakah di antara ini yang merupakan "apel"?`,
   answers: [
-    { icon: <AppleSvg />, name: "la manzana" },
-    { icon: <BoySvg />, name: "el niño" },
-    { icon: <WomanSvg />, name: "la mujer" },
+    { icon: <AppleSvg />, name: "apel" },
+    { icon: <BoySvg />, name: "anak laki-laki" },
+    { icon: <WomanSvg />, name: "wanita" },
   ],
   correctAnswer: 0,
 } as const;
 
 const lessonProblem2 = {
   type: "WRITE_IN_ENGLISH",
-  question: "El niño",
-  answerTiles: ["woman", "milk", "water", "I", "The", "boy"],
+  question: "Bocah Lanang",
+  answerTiles: ["wanita", "susu", "air", "aku", "seorang", "anak laki-laki"],
   correctAnswer: [4, 5],
 } as const;
 
@@ -362,21 +362,21 @@ const CheckAnswer = ({
             className="hidden rounded-2xl border-2 border-b-4 border-gray-200 bg-white p-3 font-bold uppercase text-gray-400 transition hover:border-gray-300 hover:bg-gray-200 sm:block sm:min-w-[150px] sm:max-w-fit"
             onClick={onSkip}
           >
-            Skip
+            Lompati
           </button>
           {!isAnswerSelected ? (
             <button
               className="grow rounded-2xl bg-gray-200 p-3 font-bold uppercase text-gray-400 sm:min-w-[150px] sm:max-w-fit sm:grow-0"
               disabled
             >
-              Check
+              Periksa
             </button>
           ) : (
             <button
               onClick={onCheckAnswer}
               className="grow rounded-2xl border-b-4 border-green-600 bg-green-500 p-3 font-bold uppercase text-white sm:min-w-[150px] sm:max-w-fit sm:grow-0"
             >
-              Check
+              Periksa
             </button>
           )}
         </div>
@@ -398,7 +398,7 @@ const CheckAnswer = ({
                 <div className="hidden rounded-full bg-white p-5 text-green-500 sm:block">
                   <DoneSvg />
                 </div>
-                <div className="text-2xl">Good job!</div>
+                <div className="text-2xl">Kerja bagus!</div>
               </div>
             ) : (
               <div className="mb-2 flex flex-col gap-5 sm:flex-row sm:items-center">
@@ -406,7 +406,7 @@ const CheckAnswer = ({
                   <BigCloseSvg />
                 </div>
                 <div className="flex flex-col gap-2">
-                  <div className="text-2xl">Correct solution:</div>{" "}
+                  <div className="text-2xl">Jawaban yang benar:</div>{" "}
                   <div className="text-sm font-normal">{correctAnswer}</div>
                 </div>
               </div>
@@ -420,7 +420,7 @@ const CheckAnswer = ({
                 : "w-full rounded-2xl border-b-4 border-red-600 bg-red-500 p-3 font-bold uppercase text-white transition hover:brightness-105 sm:min-w-[150px] sm:max-w-fit"
             }
           >
-            Continue
+            Lanjut
           </button>
         </div>
       </div>
@@ -563,7 +563,7 @@ const ProblemWriteInEnglish = ({
         </div>
         <section className="flex max-w-2xl grow flex-col gap-5 self-center sm:items-center sm:justify-center sm:gap-24">
           <h1 className="mb-2 text-2xl font-bold sm:text-3xl">
-            Write this in English
+            Tulis dalam bahasa Indonesia
           </h1>
 
           <div className="w-full">
@@ -709,7 +709,7 @@ const LessonComplete = ({
             className="hidden rounded-2xl border-2 border-b-4 border-gray-200 bg-white p-3 font-bold uppercase text-gray-400 transition hover:border-gray-300 hover:bg-gray-200 sm:block sm:min-w-[150px] sm:max-w-fit"
             onClick={() => setReviewLessonShown(true)}
           >
-            Review lesson
+            Ulas pelajaran
           </button>
           <Link
             className={
@@ -725,7 +725,7 @@ const LessonComplete = ({
               }
             }}
           >
-            Continue
+            Lanjutkan
           </Link>
         </div>
       </section>
