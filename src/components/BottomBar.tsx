@@ -7,7 +7,7 @@ type BottomBarItem = {
   icon: JSX.Element;
 };
 
-export type Tab = "Belajar" | "Toko" | "Profil" | "Leaderboards";
+export type Tab = "Belajar" | "Toko" | "Profil" | "Papan Skor";
 
 export const useBottomBarItems = () => {
   const loggedIn = useBoundStore((x) => x.loggedIn);
@@ -138,7 +138,7 @@ export const useBottomBarItems = () => {
 
   if (loggedIn) {
     bottomBarItems.splice(1, 0, {
-      name: "Leaderboards",
+      name: "Papan Skor",
       href: "/leaderboard",
       icon: (
         <svg width="46" height="46" viewBox="0 0 46 46" fill="none">

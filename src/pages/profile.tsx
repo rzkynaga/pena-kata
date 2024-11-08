@@ -22,7 +22,7 @@ const Profile: NextPage = () => {
   return (
     <div>
       <ProfileTopBar />
-      <LeftBar selectedTab="Profile" />
+      <LeftBar selectedTab="Profil" />
       <div className="flex justify-center gap-3 pt-14 md:ml-24 lg:ml-64 lg:gap-12">
         <div className="flex w-full max-w-4xl flex-col gap-5 p-5">
           <ProfileTopSection />
@@ -31,7 +31,7 @@ const Profile: NextPage = () => {
         </div>
       </div>
       <div className="pt-[90px]"></div>
-      <BottomBar selectedTab="Profile" />
+      <BottomBar selectedTab="Profil" />
     </div>
   );
 };
@@ -44,7 +44,7 @@ const ProfileTopBar = () => {
       <div className="invisible" aria-hidden={true}>
         <SettingsGearSvg />
       </div>
-      <span className="text-gray-400">Profile</span>
+      <span className="text-gray-400">Profil</span>
       <Link href="/settings/account">
         <SettingsGearSvg />
         <span className="sr-only">Settings</span>
@@ -77,16 +77,16 @@ const ProfileTopSection = () => {
       <div className="flex grow flex-col justify-between gap-3">
         <div className="flex flex-col gap-2">
           <div>
-            <h1 className="text-2xl font-bold">{name}</h1>
+            <h1 className="text-3xl text-gray-200 mb-2 font-bold">{name}</h1>
             <div className="text-sm text-gray-400">{username}</div>
           </div>
           <div className="flex items-center gap-3">
             <ProfileTimeJoinedSvg />
-            <span className="text-gray-500">{`Joined ${joinedAt}`}</span>
+            <span className="text-gray-300">{`Bergabung ${joinedAt}`}</span>
           </div>
           <div className="flex items-center gap-3">
             <ProfileFriendsSvg />
-            <span className="text-gray-500">{`${followingCount} Following / ${followersCount} Followers`}</span>
+            <span className="text-[#60A5FA]">{`${followingCount} Mengikuti / ${followersCount} Pengikut`}</span>
           </div>
         </div>
 
@@ -94,10 +94,10 @@ const ProfileTopSection = () => {
       </div>
       <Link
         href="/settings/account"
-        className="hidden items-center gap-2 self-start rounded-2xl border-b-4 border-blue-500 bg-blue-400 px-5 py-3 font-bold uppercase text-white transition hover:brightness-110 md:flex"
+        className="hidden items-center gap-2 self-start rounded-2xl border-b-4 border-blue-500 bg-[#60A5FA] px-5 py-3 font-bold uppercase text-gray-200 transition hover:bg-blue-600 md:flex"
       >
         <EditPencilSvg />
-        Edit profile
+        Edit profil
       </Link>
     </section>
   );
@@ -106,12 +106,12 @@ const ProfileTopSection = () => {
 const ProfileStatsSection = () => {
   const streak = useBoundStore((x) => x.streak);
   const totalXp = 125;
-  const league = "Bronze";
+  const league = "Perunggu";
   const top3Finishes = 0;
 
   return (
     <section>
-      <h2 className="mb-5 text-2xl font-bold">Statistics</h2>
+      <h2 className="mb-5 text-3xl text-gray-200 font-bold">Statistik</h2>
       <div className="grid grid-cols-2 gap-3">
         <div className="flex gap-2 rounded-2xl border-2 border-gray-200 p-2 md:gap-3 md:px-6 md:py-4">
           {streak === 0 ? <EmptyFireSvg /> : <FireSvg />}
@@ -119,29 +119,29 @@ const ProfileStatsSection = () => {
             <span
               className={[
                 "text-xl font-bold",
-                streak === 0 ? "text-gray-400" : "",
+                streak === 0 ? "text-gray-200" : "",
               ].join(" ")}
             >
               {streak}
             </span>
-            <span className="text-sm text-gray-400 md:text-base">
-              Day streak
+            <span className="text-sm text-gray-300 md:text-base">
+              Runtutan hari
             </span>
           </div>
         </div>
         <div className="flex gap-2 rounded-2xl border-2 border-gray-200 p-2 md:gap-3 md:px-6 md:py-4">
           <LightningProgressSvg size={35} />
           <div className="flex flex-col">
-            <span className="text-xl font-bold">{totalXp}</span>
-            <span className="text-sm text-gray-400 md:text-base">Total XP</span>
+            <span className="text-xl text-gray-200 font-bold">{totalXp}</span>
+            <span className="text-sm text-gray-300 md:text-base">Total XP</span>
           </div>
         </div>
         <div className="flex gap-2 rounded-2xl border-2 border-gray-200 p-2 md:gap-3 md:px-6 md:py-4">
           <BronzeLeagueSvg width={25} height={35} />
           <div className="flex flex-col">
-            <span className="text-xl font-bold">{league}</span>
-            <span className="text-sm text-gray-400 md:text-base">
-              Current league
+            <span className="text-xl text-gray-200 font-bold">{league}</span>
+            <span className="text-sm text-gray-300 md:text-base">
+              Liga saat ini
             </span>
           </div>
         </div>
@@ -151,13 +151,13 @@ const ProfileStatsSection = () => {
             <span
               className={[
                 "text-xl font-bold",
-                top3Finishes === 0 ? "text-gray-400" : "",
+                top3Finishes === 0 ? "text-gray-200" : "",
               ].join(" ")}
             >
               {top3Finishes}
             </span>
-            <span className="text-sm text-gray-400 md:text-base">
-              Top 3 finishes
+            <span className="text-sm text-gray-300 md:text-base">
+              Posisi 3 besar
             </span>
           </div>
         </div>
@@ -170,7 +170,7 @@ const ProfileFriendsSection = () => {
   const [state, setState] = useState<"FOLLOWING" | "FOLLOWERS">("FOLLOWING");
   return (
     <section>
-      <h2 className="mb-5 text-2xl font-bold">Friends</h2>
+      <h2 className="mb-5 text-3xl text-gray-200 font-bold">Teman</h2>
       <div className="rounded-2xl border-2 border-gray-200">
         <div className="flex">
           <button
@@ -182,7 +182,7 @@ const ProfileFriendsSection = () => {
             ].join(" ")}
             onClick={() => setState("FOLLOWING")}
           >
-            Following
+            Mengikuti
           </button>
           <button
             className={[
@@ -193,13 +193,13 @@ const ProfileFriendsSection = () => {
             ].join(" ")}
             onClick={() => setState("FOLLOWERS")}
           >
-            Followers
+            Pengikut
           </button>
         </div>
         <div className="flex items-center justify-center py-10 text-center text-gray-500">
           {state === "FOLLOWING"
-            ? "Not following anyone yet"
-            : "No followers yet"}
+            ? "Kamu belum mengikuti siapapun"
+            : "Belum ada pengikut"}
         </div>
       </div>
     </section>
