@@ -471,7 +471,7 @@ const ProblemSelect1Of3 = ({
           />
         </div>
         <section className="flex max-w-2xl grow flex-col gap-5 self-center sm:items-center sm:justify-center sm:gap-24 sm:px-5">
-          <h1 className="self-start text-2xl font-bold sm:text-3xl">
+          <h1 className="self-start text-2xl text-[#fff] font-bold sm:text-3xl">
             {question}
           </h1>
           <div
@@ -485,7 +485,7 @@ const ProblemSelect1Of3 = ({
                   className={
                     i === selectedAnswer
                       ? "cursor-pointer rounded-xl border-2 border-b-4 border-blue-300 bg-blue-100 p-4 text-blue-400"
-                      : "cursor-pointer rounded-xl border-2 border-b-4 border-gray-200 p-4 hover:bg-gray-100"
+                      : "cursor-pointer rounded-xl border-2 border-b-4 border-gray-200 text-[#fff] p-4 hover:bg-gray-100 hover:text-gray-900"
                   }
                   role="radio"
                   aria-checked={i === selectedAnswer}
@@ -562,14 +562,14 @@ const ProblemWriteInEnglish = ({
           />
         </div>
         <section className="flex max-w-2xl grow flex-col gap-5 self-center sm:items-center sm:justify-center sm:gap-24">
-          <h1 className="mb-2 text-2xl font-bold sm:text-3xl">
+          <h1 className="mb-2 text-2xl font-bold text-[#fff] sm:text-3xl">
             Tulis dalam bahasa Indonesia
           </h1>
 
           <div className="w-full">
             <div className="flex items-center gap-2 px-2">
               <Image src={womanPng} alt="" width={92} height={115} />
-              <div className="relative ml-2 w-fit rounded-2xl border-2 border-gray-200 p-4">
+              <div className="relative ml-2 w-fit rounded-2xl text-[#fff] border-2 border-gray-200 p-4">
                 {question}
                 <div
                   className="absolute h-4 w-4 rotate-45 border-b-2 border-l-2 border-gray-200 bg-white"
@@ -586,7 +586,7 @@ const ProblemWriteInEnglish = ({
                 return (
                   <button
                     key={i}
-                    className="rounded-2xl border-2 border-b-4 border-gray-200 p-2 text-gray-700"
+                    className="rounded-2xl border-2 border-b-4 border-gray-200 p-2 text-[#fff]"
                     onClick={() => {
                       setSelectedAnswers((selectedAnswers) => {
                         return selectedAnswers.filter((x) => x !== i);
@@ -607,7 +607,7 @@ const ProblemWriteInEnglish = ({
                   className={
                     selectedAnswers.includes(i)
                       ? "rounded-2xl border-2 border-b-4 border-gray-200 bg-gray-200 p-2 text-gray-200"
-                      : "rounded-2xl border-2 border-b-4 border-gray-200 p-2 text-gray-700"
+                      : "rounded-2xl border-2 border-b-4 border-gray-200 p-2 text-[#fff]"
                   }
                   disabled={selectedAnswers.includes(i)}
                   onClick={() =>

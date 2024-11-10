@@ -143,7 +143,7 @@ const Leaderboard: NextPage = () => {
             <>
               <LeaderboardBannerSvg />
               <h1 className="text-center text-2xl font-bold text-gray-300">
-                Unlock Leaderboards!
+                Buka Papan Skor!
               </h1>
               <p className="text-center text-lg text-gray-300">
                 Selesaikan {lessonsRemainingToUnlockLeaderboard} pelajaran lagi
