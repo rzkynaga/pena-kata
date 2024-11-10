@@ -118,7 +118,7 @@ const ProfileStatsSection = () => {
           <div className="flex flex-col">
             <span
               className={[
-                "text-xl font-bold",
+                "text-xl font-bold text-[#fff]",
                 streak === 0 ? "text-gray-200" : "",
               ].join(" ")}
             >
