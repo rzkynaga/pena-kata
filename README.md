@@ -6,4 +6,5 @@ Written with [React](https://react.dev/), [TypeScript](https://www.typescriptlan
 
 ### Documentations
 <img src="./screenshots/screenshot-desktop.png" alt="Desktop screenshot" />
+<img src="./screenshots/screenshot-desktop-2.png" alt="Desktop screenshot" />
 <img src="./screenshots/screenshot-mobile.png" alt="Mobile screenshot" />
