@@ -5,6 +5,12 @@ A web-based application for learning regional languages of Indonesia, inspired b
 Written with [React](https://react.dev/), [TypeScript](https://www.typescriptlang.org/), [Next.js](https://nextjs.org/), and [Tailwind](https://tailwindcss.com/)
 
 ### Documentations
-<img src="./screenshots/screenshot-desktop.png" alt="Desktop screenshot" />
-<img src="./screenshots/screenshot-desktop-2.png" alt="Desktop screenshot" />
-<img src="./screenshots/screenshot-mobile.png" alt="Mobile screenshot" />
+<div align="center">
+  <div style="display: flex;">
+  <img src="./screenshots/screenshot-desktop.png" alt="Desktop screenshot" />
+  <img src="./screenshots/screenshot-desktop-2.png" alt="Desktop screenshot" />
+  
+  <img src="./screenshots/screenshot-mobile.png" alt="Mobile screenshot" height="700"/>
+  <img src="./screenshots/screenshot-mobile-2.png" alt="Mobile screenshot" height="700" />
+  </div>
+</div>
