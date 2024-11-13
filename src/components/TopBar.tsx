@@ -79,7 +79,7 @@ export const TopBar = ({
   return (
     <header className="fixed z-20 h-[58px] w-full">
       <div
-        className={`relative flex h-full w-full items-center justify-between border-b-2 px-[10px] transition duration-500 sm:hidden ${borderColor} ${backgroundColor}`}
+        className={`relative flex h-full w-full items-center justify-between px-[10px] transition duration-500 sm:hidden bg-[#235390]`}
       >
         <button
           onClick={() =>
@@ -130,19 +130,19 @@ export const TopBar = ({
             switch (menu) {
               case "LANGUAGES":
                 return (
-                  <div className="flex gap-5 p-5">
+                  <div className="flex gap-5 bg-[#141F25] p-5">
                     <div className="flex flex-col items-center justify-between gap-2">
                       <div className="rounded-2xl border-4 border-blue-400">
                         <Flag language={language} width={80} />
                       </div>
-                      <span className="font-bold">{language.name}</span>
+                      <span className="font-bold text-gray-200">{language.name}</span>
                     </div>
                     <Link
                       className="flex flex-col items-center justify-between gap-2"
                       href="/register"
                     >
-                      <div className="rounded-2xl border-4 border-white">
-                        <AddLanguageSvg className="h-16 w-20" />
+                      <div className="rounded-2xl">
+                        <AddLanguageSvg className="h-14 w-20" />
                       </div>
                       <span className="font-bold text-gray-400">Courses</span>
                     </Link>
@@ -151,10 +151,10 @@ export const TopBar = ({
 
               case "STREAK":
                 return (
-                  <div className="flex grow flex-col items-center gap-3 p-5">
-                    <h2 className="text-xl font-bold">Streak</h2>
-                    <p className="text-sm text-gray-400">
-                      {`Practice each day so your streak won't reset!`}
+                  <div className="flex grow bg-[#141F25] flex-col items-center gap-3 p-5">
+                    <h2 className="text-xl text-gray-200 font-bold">Streak</h2>
+                    <p className="text-sm text-gray-200">
+                      {`Selesaikan satu pelajaran hari ini untuk memulai runtunan baru!`}
                     </p>
                     <div className="self-stretch">
                       <Calendar now={now} setNow={setNow} />
@@ -164,19 +164,19 @@ export const TopBar = ({
 
               case "GEMS":
                 return (
-                  <div className="flex grow items-center gap-3 p-5">
+                  <div className="flex bg-[#141F25] grow items-center gap-3 p-5">
                     <LingotsTreasureChestSvg className="h-24 w-24" />
                     <div className="flex flex-col gap-3">
-                      <h2 className="text-xl font-bold text-black">Lingots</h2>
+                      <h2 className="text-xl font-bold text-gray-200">Lingots</h2>
                       <p className="text-sm font-normal text-gray-400">
-                        You have {lingots}{" "}
+                        Kamu punya {lingots}{" "}
                         {lingots === 1 ? "lingot" : "lingots"}.
                       </p>
                       <Link
                         className="font-bold uppercase text-blue-400 transition hover:brightness-110"
                         href="/shop"
                       >
-                        Go to shop
+                        Pergi ke toko
                       </Link>
                     </div>
                   </div>
@@ -184,9 +184,9 @@ export const TopBar = ({
 
               case "MORE":
                 return (
-                  <div className="flex grow flex-col">
+                  <div className="flex bg-[#141F25] grow flex-col">
                     <Link
-                      className="flex items-center gap-2 p-2 font-bold text-gray-700"
+                      className="flex items-center gap-2 p-2 font-bold text-gray-200"
                       href="https://podcast.duolingo.com"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -195,7 +195,7 @@ export const TopBar = ({
                       Podcast
                     </Link>
                     <Link
-                      className="flex items-center gap-2 border-t-2 border-gray-300 p-2 font-bold text-gray-700"
+                      className="flex items-center gap-2 border-t-2 border-gray-700 p-2 font-bold text-gray-200"
                       href="https://schools.duolingo.com"
                       target="_blank"
                       rel="noopener noreferrer"
