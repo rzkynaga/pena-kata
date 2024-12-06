@@ -8,10 +8,7 @@ import { Flag } from "./Flag";
 import {
   FireSvg,
   GemSvg,
-  GlobeIconSvg,
   LingotsTreasureChestSvg,
-  MoreOptionsSvg,
-  PodcastIconSvg,
 } from "./Svgs";
 
 const EmptyFireTopBarSvg = (props: ComponentProps<"svg">) => {

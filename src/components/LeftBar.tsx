@@ -5,7 +5,6 @@ import type { Tab } from "./BottomBar";
 import { useBottomBarItems } from "./BottomBar";
 import type { LoginScreenState } from "./LoginScreen";
 import { LoginScreen } from "./LoginScreen";
-import { GlobeIconSvg, PodcastIconSvg } from "./Svgs";
 import { useBoundStore } from "~/hooks/useBoundStore";
 
 const LeftBarMoreMenuSvg = (props: ComponentProps<"svg">) => {
