@@ -8,10 +8,7 @@ import { Flag } from "./Flag";
 import {
   FireSvg,
   GemSvg,
-  GlobeIconSvg,
   LingotsTreasureChestSvg,
-  MoreOptionsSvg,
-  PodcastIconSvg,
 } from "./Svgs";
 
 const EmptyFireTopBarSvg = (props: ComponentProps<"svg">) => {
@@ -112,12 +109,6 @@ export const TopBar = ({
             {lingots}
           </span>
         </button>
-        <MoreOptionsSvg
-          onClick={() => setMenu((x) => (x === "MORE" ? "HIDDEN" : "MORE"))}
-          role="button"
-          tabIndex={0}
-          aria-label="Toggle more menu"
-        />
 
         <div
           className={[
@@ -184,26 +175,7 @@ export const TopBar = ({
 
               case "MORE":
                 return (
-                  <div className="flex bg-[#141F25] grow flex-col">
-                    <Link
-                      className="flex items-center gap-2 p-2 font-bold text-gray-200"
-                      href="https://podcast.duolingo.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <PodcastIconSvg className="h-10 w-10" />
-                      Podcast
-                    </Link>
-                    <Link
-                      className="flex items-center gap-2 border-t-2 border-gray-700 p-2 font-bold text-gray-200"
-                      href="https://schools.duolingo.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GlobeIconSvg className="h-10 w-10" />
-                      Schools
-                    </Link>
-                  </div>
+                  <></>
                 );
 
               case "HIDDEN":

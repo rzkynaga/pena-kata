@@ -9,6 +9,7 @@
 }
 
 body {
+    scroll-behavior: smooth;
     font-family: 'Feather Bold', sans-serif;
     background-color:#141f25  ;
 }

@@ -5,7 +5,6 @@ import type { Tab } from "./BottomBar";
 import { useBottomBarItems } from "./BottomBar";
 import type { LoginScreenState } from "./LoginScreen";
 import { LoginScreen } from "./LoginScreen";
-import { GlobeIconSvg, PodcastIconSvg } from "./Svgs";
 import { useBoundStore } from "~/hooks/useBoundStore";
 
 const LeftBarMoreMenuSvg = (props: ComponentProps<"svg">) => {
@@ -85,27 +84,7 @@ export const LeftBar = ({ selectedTab }: { selectedTab: Tab | null }) => {
                 moreMenuShown ? "" : "hidden",
               ].join(" ")}
             >
-              <div className="flex flex-col py-2">
-                <Link
-                  className="flex items-center gap-4 px-5 py-2 text-left uppercase hover:bg-gray-900"
-                  href="https://schools.duolingo.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <GlobeIconSvg className="h-10 w-10" />
-                  Sekolah
-                </Link>
-                <Link
-                  className="flex items-center gap-4 px-5 py-2 text-left uppercase hover:bg-gray-900"
-                  href="https://podcast.duolingo.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <PodcastIconSvg className="h-10 w-10" />
-                  Podcast
-                </Link>
-              </div>
-              <div className="flex flex-col border-t-2 border-gray-300 py-2">
+              <div className="flex flex-col border-gray-300 py-2">
                 {!loggedIn && (
                   <button
                     className="px-5 py-2 text-left uppercase hover:bg-gray-900"
