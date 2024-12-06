@@ -524,7 +524,7 @@ const Learn: NextPage = () => {
             {scrollY > 100 && (
               <button
                 className="absolute right-4 flex h-14 w-14 items-center justify-center self-end rounded-2xl border-2 border-b-4 border-gray-200 bg-white transition hover:bg-gray-50 hover:brightness-90 md:right-0"
-                onClick={() => scrollTo(0, 0)}
+                onClick={() => scrollTo({top: 0, behavior: 'smooth'})}
               >
                 <span className="sr-only">Jump to top</span>
                 <UpArrowSvg />
@@ -630,7 +630,7 @@ const UnitHeader = ({
           <p className="text-lg">{description}</p>
         </div>
         <Link
-          href={`https://duolingo.com/guidebook/${language.code}/${unitNumber}`}
+          href={`#`}
           className={[
             "flex items-center gap-3 rounded-2xl border-2 border-b-4 p-3 transition hover:text-gray-100",
             borderColor,
