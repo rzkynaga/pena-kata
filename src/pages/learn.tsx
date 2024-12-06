@@ -617,7 +617,6 @@ const UnitHeader = ({
   backgroundColor: `bg-${string}`;
   borderColor: `border-${string}`;
 }) => {
-  const language = useBoundStore((x) => x.language);
   return (
     <article
       className={["max-w-2xl text-white sm:rounded-xl", backgroundColor].join(
