@@ -268,7 +268,7 @@ const ProgressBar = ({
             width: `${(correctAnswerCount / totalCorrectAnswersNeeded) * 100}%`,
           }}
         >
-          <div className="h-[5px] w-full rounded-full bg-green-400"></div>
+          <div className="h-[5px] w-full rounded-full bg-blue-400"></div>
         </div>
       </div>
       {hearts !== null &&
