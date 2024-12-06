@@ -97,7 +97,7 @@ export const LoginScreen = ({
     void router.push("/learn");
   };
 
-  const [isVisible, setIsVisible] = useState(true);
+  // const [isVisible, setIsVisible] = useState(true);
 
   const [shouldRender, setShouldRender] = useState(loginScreenState !== "HIDDEN");
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -203,7 +203,7 @@ export const LoginScreen = ({
               {loginScreenState === "LOGIN" && (
                 <div className="absolute bottom-0 right-0 top-0 flex items-center justify-center pr-5">
                   <Link
-                    className="font-bold uppercase text-gray-400 hover:brightness-75"
+                    className="font-bold text-gray-400 hover:brightness-75"
                     href="/forgot-password"
                   >
                     Lupa?
