@@ -261,7 +261,7 @@ const ProgressBar = ({
       >
         <div
           className={
-            "h-full rounded-full bg-green-500 transition-all duration-700 " +
+            "h-full rounded-full bg-blue-500 transition-all duration-700 " +
             (correctAnswerCount > 0 ? "px-2 pt-1 " : "")
           }
           style={{
@@ -315,7 +315,7 @@ const QuitMessage = ({
             Are you sure you want to quit?
           </h2>
           <p className="text-gray-500 sm:text-lg">
-            All progress for this lesson will be lost.
+            Seluruh progres dari pelajaran ini akan hilang.
           </p>
         </div>
         <div className="flex grow flex-col items-center justify-center gap-4 sm:flex-row-reverse">
@@ -374,7 +374,7 @@ const CheckAnswer = ({
           ) : (
             <button
               onClick={onCheckAnswer}
-              className="grow rounded-2xl border-b-4 border-green-600 bg-green-500 p-3 font-bold uppercase text-white sm:min-w-[150px] sm:max-w-fit sm:grow-0"
+              className="grow rounded-2xl border-b-4 border-blue-600 bg-blue-500 p-3 font-bold uppercase text-white sm:min-w-[150px] sm:max-w-fit sm:grow-0"
             >
               Periksa
             </button>
@@ -386,7 +386,7 @@ const CheckAnswer = ({
         className={
           correctAnswerShown
             ? isAnswerCorrect
-              ? "fixed bottom-0 left-0 right-0 bg-lime-100 font-bold text-green-600 transition-all"
+              ? "fixed bottom-0 left-0 right-0 bg-blue-100 font-bold text-blue-600 transition-all"
               : "fixed bottom-0 left-0 right-0 bg-red-100 font-bold text-red-500 transition-all"
             : "fixed -bottom-52 left-0 right-0"
         }
@@ -395,7 +395,7 @@ const CheckAnswer = ({
           <>
             {isAnswerCorrect ? (
               <div className="mb-2 flex flex-col gap-5 sm:flex-row sm:items-center">
-                <div className="hidden rounded-full bg-white p-5 text-green-500 sm:block">
+                <div className="hidden rounded-full bg-white p-5 text-blue-500 sm:block">
                   <DoneSvg />
                 </div>
                 <div className="text-2xl">Kerja bagus!</div>
@@ -416,7 +416,7 @@ const CheckAnswer = ({
             onClick={onFinish}
             className={
               isAnswerCorrect
-                ? "w-full rounded-2xl border-b-4 border-green-600 bg-green-500 p-3 font-bold uppercase text-white transition hover:brightness-105 sm:min-w-[150px] sm:max-w-fit"
+                ? "w-full rounded-2xl border-b-4 border-blue-600 bg-blue-500 p-3 font-bold uppercase text-white transition hover:brightness-105 sm:min-w-[150px] sm:max-w-fit"
                 : "w-full rounded-2xl border-b-4 border-red-600 bg-red-500 p-3 font-bold uppercase text-white transition hover:brightness-105 sm:min-w-[150px] sm:max-w-fit"
             }
           >
@@ -690,9 +690,9 @@ const LessonComplete = ({
               {formatTime(endTime.current - startTime.current)}
             </div>
           </div>
-          <div className="min-w-[110px] rounded-xl border-2 border-green-400 bg-green-400">
+          <div className="min-w-[110px] rounded-xl border-2 border-blue-400 bg-blue-400">
             <h2 className="py-1 text-center text-white">Amazing</h2>
-            <div className="flex justify-center rounded-xl bg-white py-4 text-green-400">
+            <div className="flex justify-center rounded-xl bg-white py-4 text-blue-400">
               {Math.round(
                 (correctAnswerCount /
                   (correctAnswerCount + incorrectAnswerCount)) *
