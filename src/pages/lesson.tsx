@@ -852,11 +852,11 @@ const LessonFastForwardStart = ({
     <div className="flex min-h-screen flex-col px-5 py-8 text-center">
       <div className="flex grow flex-col items-center justify-center gap-5">
         <LessonFastForwardStartSvg />
-        <h1 className="text-lg font-bold">
-          Want to jump to Unit {unitNumber}?
+        <h1 className="text-lg font-bold text-gray-200">
+          Kamu ingin lompat ke Unit {unitNumber}?
         </h1>
-        <p className="text-sm text-gray-400">
-          {`Pass the test to jump ahead. We won't make it easy for you though.`}
+        <p className="text-sm text-gray-300">
+          {`Selesaikan tes untuk lanjut. Namun, kami tidak akan mempermudahmu.`}
         </p>
       </div>
       <div className="flex flex-col gap-5"></div>
@@ -866,13 +866,13 @@ const LessonFastForwardStart = ({
             href="/learn"
             className="font-bold uppercase text-blue-400 transition hover:brightness-110"
           >
-            Maybe later
+            Nanti
           </Link>
           <button
             className="w-full rounded-2xl border-b-4 border-blue-500 bg-blue-400 p-3 font-bold uppercase text-white transition hover:brightness-110 sm:min-w-[150px] sm:max-w-fit"
             onClick={() => setIsStartingLesson(false)}
           >
-            {`Let's go`}
+            {`Mulai`}
           </button>
         </div>
       </section>
